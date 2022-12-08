@@ -6,7 +6,7 @@ public class ConditionRun {
 
 		ConditionExample condition = new ConditionExample();
 		
-		condition.ex2();
+		condition.ex6();
 		
 	}
 		
