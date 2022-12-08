@@ -70,7 +70,21 @@ public class ConditionExample {
 		
 		String season;
 		
-		if (month == 3 || month == 4 || month == 5) {
+		
+		switch(month) {
+		
+		case 12 : case 1 : case 2 : season = "겨울"; break;
+		case 3 : case 4 : case 5 : season = "봄"; break;
+		case 6 : case 7 : case 8 : season = "여름"; break;
+		case 9 : case 10 : case 11 : season = "가을"; break;
+		default : season = "해당계절없음";
+		
+		}
+
+		System.out.println(season);
+		
+		
+		/*if (month == 3 || month == 4 || month == 5) {
 			season = "봄";
 			
 		} else if (month >= 6 && month <= 9 ) {
@@ -90,9 +104,9 @@ public class ConditionExample {
 		} else {
 			season = "해당계절없음.";
 					
-		}
+		}*/
 		
-		System.out.println(season);
+		//System.out.println(season);
 		
 	}
 	
@@ -137,20 +151,37 @@ public class ConditionExample {
 		
 		int score = sc.nextInt();
 		
-		if ( score >= 90 && score <= 100 ) {
-			System.out.println("A");
-		} else if ( score >= 80 && score < 90 ) {
-			System.out.println("B");
-		} else if ( score >= 70 && score < 80 ) {
-			System.out.println("C");
-		} else if ( score >= 60 && score < 70 ) {
-			System.out.println("D");
-		} else if ( score < 60 && score >= 0 ) {
-			System.out.println("F");
-		} else {
-			System.out.println("잘못된 입력입니다.");
-		}
+//		if ( score >= 90 && score <= 100 ) {
+//			System.out.println("A");
+//		} else if ( score >= 80 && score < 90 ) {
+//			System.out.println("B");
+//		} else if ( score >= 70 && score < 80 ) {
+//			System.out.println("C");
+//		} else if ( score >= 60 && score < 70 ) {
+//			System.out.println("D");
+//		} else if ( score < 60 && score >= 0 ) {
+//			System.out.println("F");
+//		} else {
+//			System.out.println("잘못된 입력입니다.");
+//		}
+		String result; // 결과를 담을 String 변수 선언
 		
+		if(score < 0 || score > 100) {
+			result = " 잘못 입력 ";
+		} else if (score >= 90) {
+			result = "A";
+		} else if (score >= 80) {
+			result = "B";
+		} else if (score >= 70) {
+			result = "C";
+		} else if (score >= 60) {
+			result = "D";
+		} else 
+			result = "F";
+	
+		
+		
+		System.out.println(result);
 	}
 	
 	
@@ -210,4 +241,41 @@ public class ConditionExample {
 	
 	}
 	
+	
+	public void ex7() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print(" 나이 : ");
+		
+		int age = sc.nextInt();
+
+		String result;
+		
+		if ( age < 0 || age > 100 ) {
+			result = "나이를 잘못 입력했어요";
+			
+		} else {
+			
+			System.out.print(" 키 : ");
+			
+			double height = sc.nextDouble();
+			
+			if ( height < 0 || height > 250) {
+				result = "키잘못입력";
+			} else {
+				if(age < 12 && height >= 140.0) {
+					result = "나이부적합";
+				} else if ( age >= 12 && height < 140.0) {
+					result = "키부적합";
+				} else if ( age < 12 && height < 140.0) {
+					result = "부적합";
+				} else {
+					result = "적합";
+				} 
+			}
+		}
+		
+		System.out.println(result);
+	}
 }
