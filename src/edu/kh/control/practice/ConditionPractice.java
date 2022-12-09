@@ -171,7 +171,7 @@ public class ConditionPractice {
 		if ( check <= 20*0.7) {
 			result = "[ 출석 횟수 부족 " + check + "/20 ]";
 			
-		} else if ( (mid*0.2 + last*0.3 + homework*0.3 + check*0.2) >= 70 ) {
+		} else if ( (mid*0.2 + last*0.3 + homework*0.3 + check) >= 70 ) {
 			result = "FASSS";
 		} else {
 			result = "FAIL [점수 미달]";
@@ -181,3 +181,13 @@ public class ConditionPractice {
 	}
 	
 }
+
+// 반복문 개념정리 중요  for while do~while  *** 시험 **** 
+//          반복문은 " 특정 문장들을 반복해서 수행 " 하도록함
+// for문 : 반복 횟수가 정해진 반복일때 주로 사용 ex) 두번이면 두번 한번이면 한번 정해졌을때
+//         <- 반복 여부를 결정짓는 조건식이 처음에 제시되므로 한번도 실행이 안될수도 있음
+//        초기식 확인 -> 조건식 확인 -> true면 문장 수행 후 증감식 연산
+// while문 : 반복 횟수가 정해지지 않은 반복일 때 주로 사용
+//         <- 반복 여부를 결정짓는 조건식이 처음에 제시되므로 한번도 실행이 안될수도 있음
+// do~while문 : 반복 횟수가 정해지지 않은 반복일 때 주로 사용 
+//         <- 반복 여부를 결정짓는 조건식 아래에 제시 (조건문이 끝에 있으므로 최소 1번은 무조건 실행됨)

@@ -6,13 +6,13 @@ public class ConditionRun {
 
 		ConditionExample condition = new ConditionExample();
 		
-		condition.ex3();
+		//condition.ex3();
 		
 	
 	
 		SwitchExample switchEx = new SwitchExample();
 		
-		//switchEx.example1();
+		switchEx.example1();
 		
 
 	}
