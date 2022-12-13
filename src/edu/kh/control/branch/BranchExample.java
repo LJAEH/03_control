@@ -58,9 +58,9 @@ public class BranchExample {
 		//1~100까지 1씩 증가하며 출력하는 반복문
 		//단,5의 배수는 건너뛰고 , 증가하는 값이 40이 되었을때 반복 멈춤.
 		
-		for ( int i = 1; i <= 100; i++) {
+		for ( int i = 1; i <= 100; i++ ) {
 			
-			if( i == 40) {
+			if( i == 40 ) {
 				break;
 			}
 			

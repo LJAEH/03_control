@@ -1,6 +1,6 @@
-package edu.kh.control.roof;
+package edu.kh.control.loop;
 
-public class RoofRun {
+public class LoopRun {
 
 	public static void main(String[] args) {
 		
